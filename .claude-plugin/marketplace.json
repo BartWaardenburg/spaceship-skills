@@ -1,0 +1,21 @@
+{
+  "name": "spaceship-skills",
+  "version": "1.1.0",
+  "description": "Agent skills for managing domains via the Spaceship registrar API",
+  "author": {
+    "name": "Bart Waardenburg",
+    "url": "https://github.com/bartwaardenburg"
+  },
+  "homepage": "https://github.com/bartwaardenburg/spaceship-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bartwaardenburg/spaceship-skills.git"
+  },
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "spaceship",
+      "path": "."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "spaceship",
+  "version": "1.1.0",
+  "description": "Domain management skills for the Spaceship registrar — DNS records, registration, transfers, contacts, privacy, nameservers, and SellerHub marketplace",
+  "author": {
+    "name": "Bart Waardenburg",
+    "url": "https://github.com/bartwaardenburg"
+  },
+  "homepage": "https://github.com/bartwaardenburg/spaceship-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bartwaardenburg/spaceship-skills.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "spaceship",
+    "domains",
+    "dns",
+    "registrar",
+    "mcp",
+    "domain-management"
+  ]
+}
