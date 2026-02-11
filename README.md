@@ -4,14 +4,14 @@
 [![MCP](https://img.shields.io/badge/MCP-compatible-purple.svg)](https://modelcontextprotocol.io)
 [![CI](https://github.com/bartwaardenburg/spaceship-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/bartwaardenburg/spaceship-skills/actions/workflows/validate.yml)
 
-Agent skills for managing domains via the [Spaceship](https://spaceship.com) registrar API. Works with any agent that supports the [Agent Skills](https://docs.anthropic.com/en/docs/claude-code/skills) specification.
+Agent skills for managing domains via the [Spaceship](https://spaceship.com) registrar API. Works with any agent that supports the [Agent Skills](https://agentskills.io) specification — Claude Code, Cursor, OpenAI Codex, Windsurf, GitHub Copilot, Gemini CLI, Amp, and more.
 
 > **Note:** This is an unofficial, community-maintained project and is not affiliated with or endorsed by Spaceship.
 
 ## Features
 
 - **48 Spaceship tools** organized into step-by-step workflows for domain management
-- **8 tool categories** — DNS records, domain lifecycle, contacts, privacy, nameservers, SellerHub, and more
+- **9 tool categories** — DNS records, domain lifecycle, contacts, privacy, nameservers, SellerHub, and more
 - **Common recipes** for Google Workspace, Microsoft 365, Vercel, Netlify, and other popular services
 - **Gotcha documentation** covering async operations, financial safeguards, and edge cases
 - **Companion skill** to the [spaceship-mcp](https://github.com/bartwaardenburg/spaceship-mcp) server
@@ -22,29 +22,61 @@ This skill requires the [spaceship-mcp](https://github.com/bartwaardenburg/space
 
 ## Installation
 
-### Claude Code (Plugin Marketplace)
+### Claude Code
 
 ```bash
-/plugin marketplace add bartwaardenburg/spaceship-skills
+/install bartwaardenburg/spaceship-skills
 ```
 
-### Claude Code (npx)
+### Cursor
+
+Clone into Cursor's skills directory:
 
 ```bash
-npx skills add bartwaardenburg/spaceship-skills
+git clone https://github.com/bartwaardenburg/spaceship-skills.git ~/.cursor/skills/spaceship-skills
 ```
 
-### Manual Installation
+### OpenAI Codex
 
-Clone this repository into your skills directory:
+Clone into the Codex skills directory:
 
 ```bash
-git clone https://github.com/bartwaardenburg/spaceship-skills.git ~/.claude/skills/spaceship-skills
+git clone https://github.com/bartwaardenburg/spaceship-skills.git ~/.agents/skills/spaceship-skills
+```
+
+### Windsurf
+
+Clone into the Windsurf skills directory:
+
+```bash
+git clone https://github.com/bartwaardenburg/spaceship-skills.git ~/.codeium/windsurf/skills/spaceship-skills
+```
+
+### GitHub Copilot / VS Code
+
+Clone into your project or user skills directory:
+
+```bash
+git clone https://github.com/bartwaardenburg/spaceship-skills.git ~/.agents/skills/spaceship-skills
+```
+
+### Gemini CLI
+
+```bash
+gemini skills install https://github.com/bartwaardenburg/spaceship-skills.git
+```
+
+### Amp
+
+Clone into the Amp skills directory:
+
+```bash
+git clone https://github.com/bartwaardenburg/spaceship-skills.git ~/.config/agents/skills/spaceship-skills
 ```
 
 ### Other Agents
 
-Copy the skill directory into your agent's skills location. The skill follows the standard [Agent Skills](https://docs.anthropic.com/en/docs/claude-code/skills) specification and works with any compatible agent.
+Clone or copy the skill directory into your agent's skills location. This skill follows the open [Agent Skills](https://agentskills.io) specification and works with any compatible agent.
 
 ## Available Skills
 
@@ -64,7 +96,8 @@ Covers the full Spaceship domain management API across 9 categories:
 | Domain Info | List and inspect domains in your account |
 | Domain Settings | Auto-renewal, transfer locks, nameservers, auth codes |
 | Domain Lifecycle | Register, renew, transfer, and restore domains |
-| DNS Management | List, create, update, and delete DNS records (13 record types) |
+| DNS Management | List, save, delete, and verify DNS records in bulk |
+| DNS Record Creation | Create individual records across 13 types (A, AAAA, CNAME, MX, TXT, SRV, NS, ALIAS, CAA, HTTPS, PTR, SVCB, TLSA) |
 | Contacts & Privacy | Contact profiles, WHOIS privacy, email protection |
 | Personal Nameservers | Vanity/glue record nameservers |
 | SellerHub Marketplace | List domains for sale, manage pricing, generate checkout links |
